@@ -1,0 +1,17 @@
+name: Daily TAINEX Update
+
+on:
+  schedule:
+    - cron: "0 20 * * *"   # 每天台灣時間早上 4:00 自動執行
+  workflow_dispatch:
+
+jobs:
+  call_huggingface_space:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 呼叫 HuggingFace Space
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.HF_TOKEN }}" \
+            https://huggingface.co/spaces/Keirakkat/tainex-event-tracker/run
