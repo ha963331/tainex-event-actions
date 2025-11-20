@@ -2,7 +2,7 @@ name: Daily TAINEX Update
 
 on:
   schedule:
-    - cron: "*/10 * * * *"  # 每10分鐘執行一次
+    - cron: "0 20 * * *"  # 每10分鐘執行一次
   workflow_dispatch:
 
 jobs:
