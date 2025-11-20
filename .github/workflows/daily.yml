@@ -1,9 +1,8 @@
-# test schedule enable update
 name: Daily TAINEX Update
 
 on:
   schedule:
-    - cron: "0 20 * * *"   # 每天台灣時間早上 4:00 自動執行
+    - cron: "0 20 * * *"  # 每天台灣時間 4:00 執行
   workflow_dispatch:
 
 jobs:
