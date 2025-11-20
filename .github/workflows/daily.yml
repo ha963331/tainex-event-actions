@@ -1,4 +1,4 @@
-# test schedule enable
+# test schedule enable update
 name: Daily TAINEX Update
 
 on:
